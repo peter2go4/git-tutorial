@@ -8,11 +8,36 @@
   <body>
     <h1>Git Tutorial</h1>
     <p>Änderung hier</p>
-    <ul>
+    <ul id="list">
       <li>Listeintrag 1</li>
       <li>Listeintrag 2</li>
       <li>Listeintrag 3</li>
       <li>Listeintrag 4</li>
     </ul>
+    <script>
+      // let data = {
+      //   name: "Peter",
+      //   age: 30,
+      // };
+      // console.log(data);
+
+      fetch("data.json")
+        .then((resp) => resp.json())
+        .then((json) => {
+          // console.log(json);
+          var users = json.users;
+          var output = "";
+          for (var i = 0; i < users.length; i++) {
+            output += "<li>" + users[i].name + "</li>";
+          }
+          document.getElementById("list").innerHTML += output;
+        });
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((resp) => resp.json())
+        .then((json) => {
+          console.log(json);
+        });
+    </script>
   </body>
 </html>

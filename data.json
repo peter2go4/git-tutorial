@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "Peter",
+      "age": 30,
+      "address": {
+        "street": "An-der-Lan-Strasse 33",
+        "city": "Innsbruck",
+        "Postal Code": "1030"
+      },
+      "shoppinglist": ["milk", "bread", "eggs"]
+    },
+    {
+      "name": "Mari",
+      "age": 25,
+      "address": {
+        "street": "An-der-Lan-Strasse 25",
+        "city": "Dallas",
+        "Postal Code": "9900"
+      },
+      "shoppinglist": ["Chips", "Water", "apples"]
+    }
+  ]
+}
