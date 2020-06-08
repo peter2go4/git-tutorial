@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git Tutorial</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Git Tutorial</h1>
@@ -14,6 +15,12 @@
       <li>Listeintrag 3</li>
       <li>Listeintrag 4</li>
     </ul>
+    <div class="flexbox-container">
+      <div class="flexbox-item item1">1</div>
+      <div class="flexbox-item item2">2</div>
+      <div class="flexbox-item item3">3</div>
+      <div class="flexbox-item item4">4</div>
+    </div>
     <script>
       // let data = {
       //   name: "Peter",
@@ -37,6 +44,8 @@
         .then((resp) => resp.json())
         .then((json) => {
           console.log(json);
+          document.getElementById("list").innerHTML +=
+            "<li>" + json[0].name + "</li>";
         });
     </script>
   </body>
